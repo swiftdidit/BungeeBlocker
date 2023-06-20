@@ -1,0 +1,47 @@
+# Remove a server anytime from the list & plugin will not interact with it
+# Use the Protocol Version number or the Version number (for ex: 47 allows for 1.8 connections)
+#find a list of protocol versions here: https://wiki.vg/Protocol_version_numbers
+# list of minecraft color codes: https://htmlcolorcodes.com/minecraft-color-codes/
+
+# Add as many versions you want to a server, if the server is listed under servers,
+# it will be dealt with, you cannot leave the version list blank, if you do not want us too interact with your server
+# remove it from the servers section list. By adding a version, for example,
+# if i have a server "PVP" with - "47" it will only allow 1.8 players to connect
+# protocol numbers and version numbers are supported '47' or '1.8' are the same
+# Think of it like a Version Whitelist
+
+#Placeholder list:
+# %player% = Player Username
+# %server% = Name of Backend Server
+# %playerversion% = Client Version Player is signed on with
+# %version% = BungeeBlocker supported server versions
+
+servers:
+  anarchy:
+    - "757"
+  teams:
+    - "47"
+    - "4"
+
+settings:
+  player-message: true # should we send the player the message when they are denied?
+  staff-msg: true # should we broadcast msg to staff members with "bungeeblocker.admin" permission
+  staff-bypass-msg: true # set false too disable the message entirely
+  staff-bypass: false # allow staff with the permission to bypass the version blacklist "staff-permission: true" for this too work
+  staff-permission: true # allow staff to receive broadcast alerts "bungeeblocker.admin"
+
+messages: #lines breaks are supported '\n' You CANNOT add additional hyphens please respect the '\n' to begin another line.
+  console-logmsg:
+    - "&3[VERSIONBLOCKED] %player% S: %server%> Their Version: %playerversion%"
+  player-gamemsg:
+    - "&cDisconnected from %server%: \n&rOutdated client! Use &l%version%"
+  staff-gamemsg:
+    - "&2&lStaff> &2%player% &7has tried to connect to &c%server% &7with: &9%playerversion%"
+  staff-bypass-msg:
+    - "&c&lBypassed to:&b %server%"
+  version-of-player:
+    - "&7[&6BB&7] &2%player% &bis using &f&l%playerversion% &bon &3&l%server%"
+
+checkver-usage: "&eUsage: /checkver optional: (player)"
+invalid-player: "&cInvalid player."
+permission-denied: "&cYou do not have permission to use this command."

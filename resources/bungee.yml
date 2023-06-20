@@ -1,0 +1,9 @@
+name: BungeeBlocker
+version: '1.0'
+main: me.fleeking.bungeeblocker.BungeeBlocker
+author: Fleeking
+commands:
+  bbreload:
+    description: Reload the BungeeBlocker config.yml
+  checkver:
+    description: Check the version of a player
