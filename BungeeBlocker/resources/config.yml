@@ -8,6 +8,7 @@
 # remove it from the servers section list. By adding a version, for example,
 # if i have a server "PVP" with - "47" it will only allow 1.8 players to connect
 # protocol numbers and version numbers are supported '47' or '1.8' are the same
+# All protocol numbers work, some version numbers may not work if it doens't please use the protocol number
 # Think of it like a Version Whitelist
 
 #Placeholder list:
@@ -17,9 +18,9 @@
 # %version% = BungeeBlocker supported server versions
 
 servers:
-  anarchy:
-    - "757"
-  teams:
+  anarchy: # 1.20 only
+    - "1.20"
+  teams: # 1.8 and 1.7 only
     - "47"
     - "4"
 
