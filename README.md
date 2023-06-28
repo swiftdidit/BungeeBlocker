@@ -1,7 +1,33 @@
 # BungeeBlocker
-### BungeeCord client version blocker plugin that will deny connections to your backend (Paper/Bukkit) servers
-This plugin was created for my server originally, then I realized how useful it could be for other server owner's.
- Now I know you could just use ViaVersion's version blocker, but if you're like me you want to allow 1.7 connections to your proxy, 
- and to do this you must have ViaVersion & its addons on your proxy server(BungeeCord). 
- My plugin allows you to list what versions you want too allow on your backend server. 
- You can remove your server list from the configuration any time and the plugin will not interact with it.
+## BungeeCord Server Version Whitelister (Version Blocker)
+### Spigot Download: https://www.spigotmc.org/resources/bungeeblocker.110649/
+
+#### What is this used for?:
+This plugin can be used to ALLOW ONLY for the versions you set up/list in the 'config.yml' file to be able to connect to your server.
+
+#### How to Use:
+Simply drop inside the 'plugins' folder
+Start/Restart the Proxy Server
+Open the 'BungeeBlocker' folder, open 'config.yml'
+Fill in your BungeeCord server's names exactly as you have in your BungeeCord 'config.yml'
+​
+<h3 style="color:#AA0000;">ALERT!</h3> <h4>When filling out our 'config.yml' file you must write the server names exactly how you did in your BungeeCord config.</h4>
+
+<details>
+  <summary>Click me: Example Config Server Setup</summary>
+  
+servers: #you may not list the server, and BungeeBlocker will not interact with it
+  anarchy: #only allows for the 4 following versions too connect
+    - "762" #will be read as 1.19.4
+    - "757"
+    - "755"
+    - "1.20" #will be read as 763
+  teams: #only allows two versions too connect
+    - "1.8" #will be read as 47
+    - "5" #1.7
+  
+</details>
+
+Please provide me with any suggestions you have that you believe can make this plugin more useful. Keep it related.
+
+The plugin will not work unless you have a 'BungeeCord.jar' proxy server
