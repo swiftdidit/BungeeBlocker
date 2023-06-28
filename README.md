@@ -16,14 +16,14 @@ Fill in your BungeeCord server's names exactly as you have in your BungeeCord 'c
 <details>
   <summary>Click me: Example Config Server Setup</summary>
   
-servers: #you may not list the server, and BungeeBlocker will not interact with it
-  anarchy: #only allows for the 4 following versions too connect
-    - "762" #will be read as 1.19.4
-    - "757"
-    - "755"
-    - "1.20" #will be read as 763
-  teams: #only allows two versions too connect
-    - "1.8" #will be read as 47
+servers: #you may not list the server, and BungeeBlocker will not interact with it<br>
+  anarchy: #only allows for the 4 following versions too connect<br>
+    - "762" #will be read as 1.19.4<br>
+    - "757"<br>
+    - "755"<br>
+    - "1.20" #will be read as 763<br>
+  teams: #only allows two versions too connect<br>
+    - "1.8" #will be read as 47<br>
     - "5" #1.7
   
 </details>
