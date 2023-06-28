@@ -18,16 +18,19 @@
 # %version% = BungeeBlocker supported server versions
 
 servers:
-  anarchy: # 1.20 only
+  anarchy:
+    - "762"
+    - "757"
+    - "755"
     - "1.20"
-  teams: # 1.8 and 1.7 only
-    - "47"
-    - "4"
+  teams:
+    - "1.8"
+    - "5"
 
 settings:
   player-message: true # should we send the player the message when they are denied?
   staff-msg: true # should we broadcast msg to staff members with "bungeeblocker.admin" permission
-  staff-bypass-msg: true # set false too disable the message entirely
+  staff-bypass-msg: true # set false to disable the message entirely
   staff-bypass: false # allow staff with the permission to bypass the version blacklist "staff-permission: true" for this too work
   staff-permission: true # allow staff to receive broadcast alerts "bungeeblocker.admin"
 
@@ -46,3 +49,5 @@ messages: #lines breaks are supported '\n' You CANNOT add additional hyphens ple
 checkver-usage: "&eUsage: /checkver optional: (player)"
 invalid-player: "&cInvalid player."
 permission-denied: "&cYou do not have permission to use this command."
+reload-message: "&aConfig has been reloaded"
+error-message: "&c[BB] Message Error please check &f'config.yml'"

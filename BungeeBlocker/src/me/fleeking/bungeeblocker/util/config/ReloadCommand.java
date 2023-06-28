@@ -14,7 +14,8 @@ public class ReloadCommand extends Command {
     public void execute(CommandSender sender, String[] args) {
         if (sender.hasPermission("bungeeblocker.admin")) {
             BungeeBlocker.getInstance().reloadConfig();
-            sender.sendMessage(ChatColor.GREEN + "Configuration reloaded successfully.");
+            sender.sendMessage(ChatColor.translateAlternateColorCodes('&',
+                    core.getConfiguration().getString("reload-message")));
         } else {
             sender.sendMessage(ChatColor.translateAlternateColorCodes('&',
                     core.getConfiguration().getString("permission-denied")));

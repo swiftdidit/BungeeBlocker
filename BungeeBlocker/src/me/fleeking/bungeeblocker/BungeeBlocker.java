@@ -20,9 +20,13 @@ public final class BungeeBlocker extends Plugin {
     private File dataFolder;
     private File configFile;
     private Configuration configuration;
+    private LanguageManager languageManager;
+
     @Override
     public void onEnable() {
         this.instance = this;
+        this.languageManager = new LanguageManager(this);
+
         getLogger().info("Bungee Blocker has loaded successfully (Fleeking)");
 
         // Create plugin folder
@@ -58,13 +62,18 @@ public final class BungeeBlocker extends Plugin {
     }
     public void registerEvents() {
         PluginManager pm = ProxyServer.getInstance().getPluginManager();
-        pm.registerListener(this, new VersionBlocker(this));
+        VersionBlocker versionBlocker = new VersionBlocker(this);
+
+        pm.registerListener(this, versionBlocker);
 
         getProxy().getPluginManager().registerCommand(this, new ReloadCommand(this));
         getProxy().getPluginManager().registerCommand(this, new VersionCommand(this));
     }
     public static BungeeBlocker getInstance() {
         return instance;
+    }
+    public LanguageManager languageManager(){
+        return this.languageManager;
     }
     public Configuration getConfiguration() {
         return configuration;
